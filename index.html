@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FlashLearn - Flashcard Study App</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>FlashLearn</h1>
+      <div class="header-actions">
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+        <button id="logoutBtn" class="hidden">Logout</button>
+      </div>
+    </header>
+
+    <!-- Login Section -->
+    <section id="login" class="section">
+      <h2>Login to FlashLearn</h2>
+      <form id="loginForm" class="form">
+        <input type="text" id="username" placeholder="Username" required aria-label="Username" />
+        <input type="password" id="password" placeholder="Password" required aria-label="Password" />
+        <button type="submit" id="loginBtn">Login</button>
+        <button type="button" id="registerBtn">Register</button>
+      </form>
+      <p id="loginError" class="error hidden"></p>
+    </section>
+
+    <!-- Home Section: Input form and actions -->
+    <section id="home" class="section hidden">
+      <div class="form">
+        <input type="text" id="question" placeholder="Enter Question" required aria-label="Question" />
+        <input type="text" id="answer" placeholder="Enter Answer" required aria-label="Answer" />
+        <button id="addBtn">Add Flashcard</button>
+      </div>
+      <div class="actions">
+        <button id="showAllBtn">Show All Flashcards</button>
+        <button id="randomBtn">Random Review</button>
+      </div>
+      <p id="cardCount">Total flashcards: 0</p>
+    </section>
+
+    <!-- Review Section: Dynamic flashcard display and controls -->
+    <section id="review" class="section hidden">
+      <button id="backBtn">← Back to Home</button>
+      <div id="flashcardDisplay"></div>
+      <div class="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="flipBtn">Flip</button>
+        <button id="nextBtn">Next</button>
+        <button id="deleteBtn" class="delete">Delete Current</button>
+      </div>
+      <p id="counter">Card 0 of 0</p>
+    </section>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="project.js"></script>
+</body>
+</html>
